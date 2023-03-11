@@ -1,26 +1,29 @@
 const http = require('http')
 const fs = require('fs')
-const port = 3000
+const express = require('express');
+const app = express()
+const port = 8080
+var mysql = require('mysql')
+var pool = mysql.createPool({
+    host: 'localhost',
+    user: 'username',
+    password: 'something'
+})
+app.set('view engine', 'ejs')
+app.use(express.static(__dirname + '/public'));
 
-const server = http.createServer(function(req, res)
-{
-    res.writeHead(200, {'Content-Type': 'text/html'})
-    fs.readFile('index.html', function(err, data) {
-        if(err) {
-            res.writeHead(404)
-            res.write('File not found')
-        }
-        else
-        {
-            res.write(data)
-        }
+app.get('/', (req, res) => {
+    res.render('index', {text: "World"})
+})
+
+app.get('/questionaire', (req, res) => {
+    pool.getConnection(function(err, connection){
+        if(err)
+            return console.log('Could not connect')
+        connection.release();
     })
+    
+    res.render('questionaire')
 })
 
-server.listen(port, function(err)
-{
-    if(!err)
-    {
-        console.log('Server listening on port ' + port)
-    }
-})
+app.listen(port)
