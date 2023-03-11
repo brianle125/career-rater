@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <title>Career Rater</title>
+    <script src="rating.js" defer></script>
 </head>
 <body>
     <div class="header-bar">
         <div class="logo">
-            Career Rater
+            <a href="/index">Career Rater</a>
         </div>
         <div class="search">
-            search-bar
+            <input type="text" id="search-bar" placeholder="Find company...">
         </div>
     </div>
     <div class="about">
@@ -30,7 +32,21 @@
         </div>
     </div>
     <div class="highlight-review">
-        add a review
+        <div>
+            <h2>
+                Get started by entering your company
+            </h2>
+            <form method="post">
+                <input type="text" name="company" minlength="1" maxlength="100" placeholder="Your company" autofocus required><br>
+                <input type="text" name="company" minlength="1" maxlength="100" placeholder="Field of work" autofocus required><br>
+                <input type="text" name="company" minlength="1" maxlength="100" placeholder="Location" autofocus required><br>
+                <input type="submit" value="Speak your mind!">
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <p>By using this site, you agree to our (nonexistent) privacy policy.</p>
+        <p>Copyright 2023 Placeholder Ltd.</p>
     </div>
 </body>
 </html>
