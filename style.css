@@ -34,7 +34,6 @@
 
 .search-bar {
     width: 275px;
-    flex: 1 1 200%;
     padding: 8px 10px;
     display: flex;
     align-items: center;
@@ -64,6 +63,10 @@
     margin: 3px 6px;
 }
 
+button:hover {
+    transform: scale(1.1);
+}
+
 .about {
     display: flex;
     flex-direction: column;
@@ -73,7 +76,7 @@
 
 .about::before {
     content: "";
-    background-image: url(/images/background.jpg);
+    background-image: url(images/background.jpg);
     background-size: cover;
     position: absolute;
     top: 0px;
@@ -112,7 +115,7 @@
 {
     display: flex;
     font-size: 28px;
-    background-color: rgb(116, 166, 202);
+    background-color: rgb(228, 242, 254);
     flex-direction: column;
     justify-content: center;
     text-align: center;
@@ -173,7 +176,7 @@ input[type=submit]:hover {
 
 .form-submit {
     color: white;
-    background-color: rgb(14, 41, 60);
+    background-color: rgb(41, 106, 152);
     border: 1px solid black;
     border-radius: 5px;
     font-size: 20px;
@@ -186,7 +189,7 @@ input[type=submit]:hover {
 }
 
 .footer {
-    padding: 10vh;
+    padding: 6vh;
     text-align: center;
     background-color: rgb(14, 41, 60);
     color: white;
