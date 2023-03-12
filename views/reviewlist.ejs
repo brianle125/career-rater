@@ -24,6 +24,7 @@
             <table>
                 <tr class="table-header">
                     <th>Company Name</th>
+                    <th>Address</th>
                     <th>Confidence</th>
                     <th>Experience</th>
                     <th>Morale</th>
@@ -35,6 +36,7 @@
                     <% reviews.forEach(function(review) { %>
                         <tr>
                             <td><%= review.company %></td>
+                            <td><%= review.address %></td>
                             <td><%= review.confidence %></td>
                             <td><%= review.transparency %></td>
                             <td><%= review.morale %></td>

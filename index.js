@@ -37,6 +37,7 @@ app.get('/review', (req, res) => {
 
 app.post('/review', async (req, res) => {
     let company = req.body.company;
+    let address = req.body.address;
     let confidence = req.body.confidence;
     let transparency = req.body.transparency;
     let morale = req.body.morale;
@@ -44,7 +45,7 @@ app.post('/review', async (req, res) => {
     let compensation = req.body.compensation;
 
     try {
-        const query = `insert into reviewlist values('${company}', ${confidence}, ${transparency}, ${morale}, ${satisfaction}, ${compensation})`;
+        const query = `insert into review_list values('${company}', '${address}',  ${confidence}, ${transparency}, ${morale}, ${satisfaction}, ${compensation})`;
         const client = await pool.connect();
         client.query(query);
     } catch(error)
@@ -55,7 +56,7 @@ app.post('/review', async (req, res) => {
 })
 
 app.get('/reviewlist', (req, res) => {
-    var query = 'select * from reviewlist';
+    var query = 'select * from review_list';
     pool.query(query, (err, result) => {
         if(err)
             res.send(err);
