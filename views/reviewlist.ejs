@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="stylesheets/style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+        <title>Career Rater</title>
+    </head>
+    <body>
+        <div class="header-bar">
+            <div class="logo">
+                <a href="/index">Career Rater</a>
+            </div>
+            <div class="search">
+                <form action="" class="search-bar" >
+                    <input type="text" placeholder="search a workplace" name="n">
+                    <button type="submit"><img src="images/search-icon.png"></button>
+                </form>
+            </div>
+        </div>
+        <div class="review-table">
+            <table>
+                <tr class="table-header">
+                    <th>Company Name</th>
+                    <th>Confidence</th>
+                    <th>Experience</th>
+                    <th>Morale</th>
+                    <th>Satisfaction</th>
+                    <th>Compensation</th>
+                    <th>Average company value</th>
+                </tr>
+                <% if(typeof reviews != 'undefined') { %> 
+                    <% reviews.forEach(function(review) { %>
+                        <tr>
+                            <td><%= review.company %></td>
+                            <td><%= review.confidence %></td>
+                            <td><%= review.transparency %></td>
+                            <td><%= review.morale %></td>
+                            <td><%= review.satisfaction %></td>
+                            <td><%= review.compensation %></td>
+                            <td><%= ((review.confidence + review.morale + review.transparency + review.satisfaction + review.compensation) / 50) * 100 %></td>
+                        </tr>
+                    <% }); %>
+                <% } %>
+            </table>
+        </div>
+
+    </body>
+</html>
