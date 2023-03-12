@@ -44,8 +44,8 @@ app.get('/index', (req, res) => {
     res.render('index')
 })
 
-app.get('/questionaire', (req, res) => {
-    res.render('questionaire')
+app.get('/review', (req, res) => {
+    res.render('review')
 })
 
 app.listen(port)
