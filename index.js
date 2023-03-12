@@ -39,9 +39,8 @@ app.get('/index', (req, res) => {
     pool.query(query, (err, result) => {
         if(err)
             res.send(err);
-        res.render('index', {'blogs' : result[0].rows});
+        res.render('index', {'blogs' : result.rows});
     })
-    res.render('index')
 })
 
 app.get('/review', (req, res) => {
