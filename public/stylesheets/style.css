@@ -204,13 +204,30 @@ input[type=submit]:hover {
 
 .question-form
 {
+    margin-top: 2%;
+    margin-bottom: 2%;
     max-width: 60%;
-    margin: 2%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .question-form input{
     width: 70%;
     height: 50px;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.question-form form
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.question-form label
+{
+    font-size: 10pt;
 }
 
 #search-bar
