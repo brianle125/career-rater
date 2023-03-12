@@ -7,6 +7,7 @@
 .header-bar {
     display: flex;
     flex-direction: row;
+    align-items: center;
     background-color: rgb(14, 41, 60);
     color: white;
     padding: 18px 27px;
@@ -21,10 +22,50 @@
 .logo {
     margin-right: auto;
     font-weight: bold;
+    font-size: 28px;
 }
 
 .search {
+<<<<<<< HEAD
     margin-left: auto;
+=======
+    align-self: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar {
+    width: 275px;
+    flex: 1 1 200%;
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    background: rgb(21, 61, 90);
+    border-radius: 30px;
+}
+
+.search-bar input{
+    flex: 1;
+    border: 0;
+    background: transparent;
+    outline: none;
+    font-size: 16px;
+    color: rgb(209, 198, 198);   
+    padding: 5px;
+}
+
+.search-bar button {
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+}
+
+.search-bar button img {
+    width: 20px;
+    margin: 3px 6px;
+>>>>>>> 5892e20b0706b57519f36cb10d56f2d6b230e6df
 }
 
 .about {
