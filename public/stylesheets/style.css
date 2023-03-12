@@ -166,6 +166,15 @@
     padding: 8px;
     width: 21vw;
 }
+.highlight-review button {
+    color: white;
+    background-color: rgb(14, 41, 60);
+    border-radius: 20px;
+    margin-top: 10px;
+    font-size: 20px;
+    padding: 8px;
+    width: 21vw;
+}
 
 input[type=submit] {
     color: white;
@@ -211,7 +220,8 @@ input[type=submit]:hover {
     margin-right: auto;
 }
 
-.question-form input{
+.question-form input[type=text]{
+    font-size: 16pt;
     width: 70%;
     height: 50px;
     margin-left: 5px;
@@ -219,6 +229,17 @@ input[type=submit]:hover {
     margin-bottom: 10px;
     text-align: left;
 }
+
+.question-form input[type=number]{
+    font-size: 16pt;
+    width: 30%;
+    height: 50px;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
 
 .question-form form
 {
@@ -230,6 +251,29 @@ input[type=submit]:hover {
     font-size: 10pt;
 }
 
+.review-table table {
+    border: 3px solid black;
+}
+.review-table tr.table-header {
+    background-color: rgb(14, 41, 60);
+}
+.review-table th {
+    padding: 5px;
+    margin-left:0;
+    margin-right: 0;
+    text-align: center;
+    color: white;
+    background-color: rgb(14, 41, 60);
+}
+.review-table td {
+    background-color: white;
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 18px;
+    padding: 15px;
+    margin: 0;
+}
 #search-bar
 {
     width: 60vh;

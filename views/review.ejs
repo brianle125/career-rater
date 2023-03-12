@@ -22,27 +22,22 @@
         </div>
         <section class="question-form">
             <h1>Review your company</h1>
-            <form>
-                <label for="q1">1. How confident do you feel about the stability of your job in the next 6-12 months?</label><br>
-                <input type="number" id="confidence" name="confidence"><br>
-                <label for="q2">2. Have you heard any rumors or received any communication about potential layoffs or restructuring within the company?</label><br>
-                <input type="number" id="rumors" name="rumors"><br>
-                <label for="q3">3. How would you rate the level of transparency and communication from leadership regarding company performance and future plans?</label><br>
-                <input type="number" id="communication" name="communication"><br>
-                <label for="q4">4. Have you received any training or support to help you stay competitive in your role?</label><br>
-                <input type="number" id="training" name="training"><br>
-                <label for="q5">5. Do you feel that your job duties and responsibilities are secure, or have there been changes in your role that make you uncertain about your future with the company?</label><br>
-                <input type="number" id="duties" name="duties"><br>
-                <label for="q6">6. How would you describe the overall morale and job security of your colleagues?</label><br>
-                <input type="number" id="morale" name="morale"><br>
-                <label for="q7">7. Have you seen any recent changes in the company's financial performance that make you concerned?</label><br>
-                <input type="number" id="financial" name="financial"><br>
-                <label for="q8">8. Do you feel that your job provides meaningful work that aligns with your career goals and aspirations?</label><br>
-                <input type="number" id="meaningful" name="meaningful"><br>
-                <label for="q9">9. How would you rate your overall job satisfaction, taking into account your sense of job security?</label><br>
-                <input type="number" id="satisfaction" name="satisfaction"><br>
+            <form method="post">
+                <label for="name">Company name</label><br>
+                <input type="text" name="company" required="true"><br>
+                <label for="q1">1. Rate your confidence on how you feel about the stability of your job in the next 6-12 months.</label><br>
+                <input type="number" name="confidence" min="1" max="10" required="true"><br>
+                <label for="q2">2. On a scale of 1 to 10 how transparency you rate the level of transparency and communication from leadership regarding company performance and future plans?</label><br>
+                <input type="number" name="transparency" min="1" max="10" required="true"><br>
+                <label for="q3">3. On a scale of 1 to 10 how would you rate the overall morale of your colleagues?</label><br>
+                <input type="number" name="morale" min="1" max ="10" required="true"><br>
+                <label for="q4">4. On a scale of 1 to 10 how would you rate your overall job satisfaction?</label><br>
+                <input type="number" name="satisfaction" min="1" max ="10" required="true"><br>
+                <label for="q5">5. On a scale of 1 to 10 how satisfied are you with your current compensation and benefits package?</label><br>
+                <input type="number" name="compensation" min="1" max ="10" required="true"><br>
+                <input type="submit" value="Submit">
             </form>
-            <button class="form-submit" onClick="">Submit</button>
+           
         </section>
         <section class="">
         </section>
